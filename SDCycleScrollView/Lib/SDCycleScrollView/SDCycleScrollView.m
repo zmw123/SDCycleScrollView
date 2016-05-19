@@ -415,6 +415,11 @@ NSString *const ID = @"cycleCell";
     return;
   int currentIndex = [self currentIndex];
   int targetIndex = currentIndex + 1;
+
+  if (targetIndex > _totalItemsCount) {
+    targetIndex = _totalItemsCount;
+  }
+
   if (targetIndex >= _totalItemsCount) {
     if (self.infiniteLoop) {
       targetIndex = _totalItemsCount * 0.5;
