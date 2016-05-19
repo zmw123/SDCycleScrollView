@@ -130,6 +130,9 @@ typedef enum {
 /** 是否在只有一张图时隐藏pagecontrol，默认为YES */
 @property(nonatomic) BOOL hidesForSinglePage;
 
+/** 隐藏蒙层 只有一张图片的时候 */
+@property (nonatomic, assign) BOOL hidesMengCengForSinglePage;
+
 /** pagecontrol 样式，默认为动画样式 */
 @property (nonatomic, assign) SDCycleScrollViewPageContolStyle pageControlStyle;
 
