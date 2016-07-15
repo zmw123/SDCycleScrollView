@@ -579,6 +579,11 @@ NSString *const ID = @"cycleCell";
     cell.imageView.contentMode = self.bannerImageViewContentMode;
     cell.clipsToBounds = YES;
   }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cycleScrollView:cell:index:)])
+    {
+        [self.delegate cycleScrollView:self cell:cell index:indexPath.item];
+    }
 
   return cell;
 }

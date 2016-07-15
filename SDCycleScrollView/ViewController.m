@@ -138,6 +138,14 @@
 }
 
 
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView cell:(UIView *)cell index:(NSInteger)index
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"test";
+    [label sizeToFit];
+    [cell addSubview:label];
+}
+
 /*
  
 // 滚动到第几张图回调
