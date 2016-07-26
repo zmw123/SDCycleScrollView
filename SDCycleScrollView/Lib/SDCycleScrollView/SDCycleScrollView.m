@@ -607,6 +607,12 @@ NSString *const ID = @"cycleCell";
     return; // 解决清除timer时偶尔会出现的问题
   int itemIndex = [self currentIndex];
   int indexOnPageControl = itemIndex % self.imagePathsGroup.count;
+    
+    float contentOffset = _mainView.contentOffset.x / _flowLayout.itemSize.width;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cycleScrollView:scrollToIndex:)])
+    {
+        [self.delegate cycleScrollView:self scrollToIndex:contentOffset];
+    }
 
   if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
     TAPageControl *pageControl = (TAPageControl *)_pageControl;

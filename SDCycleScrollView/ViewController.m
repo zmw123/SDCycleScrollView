@@ -98,6 +98,7 @@
     cycleScrollView2.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView2.titlesGroup = titles;
     cycleScrollView2.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+
     [demoContainerView addSubview:cycleScrollView2];
     
     //         --- 模拟加载延迟
@@ -122,6 +123,7 @@
     cycleScrollView3.currentPageDotImage = [UIImage imageNamed:@"pageControlCurrentDot"];
     cycleScrollView3.pageDotImage = [UIImage imageNamed:@"pageControlDot"];
     cycleScrollView3.imageURLStringsGroup = imagesURLStrings;
+    cycleScrollView3.showPageControl = NO;
     
     [demoContainerView addSubview:cycleScrollView3];
     
